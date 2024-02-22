@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+html,
+button {
+    font-family: 'Brush Script MT', cursive;
+}
+body{
+    background-color: var(--color-ffff);
+}
+.head{
+    background-color: var(--color-ffff);
+    border-bottom: solid 0.5px var(--color-primary);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1200;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+
+/* ********** HEADER ********** */
+header {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 7px black;
+    padding: 10px;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+nav img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: auto;
+    
+}
+nav h1 {
+    font-size: 12px;
+    margin: auto;
+    text-shadow: 0 0 3px black;
+}
+#back-button {
+    display: none;
+}
+/* ********** MAIN ********** */
+.services-main-div {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1rem));
+    align-items: center;
+    justify-content: center;
+}
+.service {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0  9px black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.service img {
+    width: 40px;
+}
+.service p {
+    font-size: 10px;
+}
+
+#calculator-form {
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+    display: none;
+}
+#calculator-form input{
+    width: 60%;
+    margin: 20px;
+    border: 0;
+    box-shadow: 0 3px 8px black;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 15px;
+    outline: 0;
+}
+#calculator-form input:focus {
+    box-shadow: 1px 6px 11px black;
+}
+#error {
+    color: red;
+    display: none;
+}
+#submit {
+    width: 60%;
+    margin: 20px;
+    border: 0;
+    box-shadow: 0 3px 8px black;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 15px;
+    outline: 0;
+    background-color: green;
+    font-size: 15px;
+    font-family: fantasy;
+}
+
+/* ********** FOOTER ********** */
+.main-footer-div {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 7px black;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
+.main-footer-div h3 {
+    font-size: 12px;
+    text-align: center;
+}
+#name {
+    color: white;
+    text-shadow: 0 3px 11px black;
+}
+#coffee {
+    color: white;
+    text-shadow: 0 3px 11px #6F4E37;
+}
