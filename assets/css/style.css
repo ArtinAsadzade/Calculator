@@ -59,12 +59,14 @@ nav h1 {
 #back-button {
     display: none;
 }
+#clear-button {
+    display: block;
+}
 /* ********** MAIN ********** */
 .services-main-div {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1rem));
     align-items: center;
     justify-content: center;
 }
@@ -76,6 +78,7 @@ nav h1 {
     box-shadow: 0 0  9px black;
     border-radius: 12px;
     cursor: pointer;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1rem));
 }
 .service img {
     width: 40px;
@@ -83,12 +86,25 @@ nav h1 {
 .service p {
     font-size: 10px;
 }
-
+#clearData {
+    width: 30%;
+    margin: 20px;
+    border: 0;
+    box-shadow: 0 3px 8px black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px 10px;
+    outline: 0;
+    background-color: gray;
+    font-size: 10px;
+    font-family: fantasy;
+    cursor: pointer;
+}
+/* ********** FORM ********** */
 #calculator-form {
     width: 100%;
     margin: 100px auto;
     text-align: center;
-    display: none;
 }
 #calculator-form input{
     width: 60%;
@@ -99,9 +115,22 @@ nav h1 {
     border-radius: 12px;
     padding: 10px 15px;
     outline: 0;
+    background-color: white;
+    color: black;
 }
 #calculator-form input:focus {
     box-shadow: 1px 6px 11px black;
+}
+#calculator-form select{
+    width: 60%;
+    margin: 20px;
+    border: 0;
+    box-shadow: 0 3px 8px black;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 15px;
+    outline: 0;
+    background-color: white;
 }
 #error {
     color: red;
@@ -119,6 +148,51 @@ nav h1 {
     background-color: green;
     font-size: 15px;
     font-family: fantasy;
+    cursor: pointer;
+}
+/* ********** RESULT ********** */
+#resultDivElem {
+    display: none;
+}
+#loveCount {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    margin: 50px auto;
+}
+#firstUserNameElem {
+    color: red;
+    font-size: 21px;
+}
+#loveNameElem {
+    color: red;
+    font-size: 21px;
+}
+#countElem {
+    color: red;
+    font-size: 21px;
+}
+#bmiResultElem {
+    width: 90%;
+    padding: 10px 15px;
+    margin: 50px auto 100px;
+    border-radius: 10px;
+    display: none;
+}
+.results {
+    box-shadow: 3px 6px 11px black;
+    padding: 10px 15px;
+    margin: 50px auto;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+/* ********** LINE ********** */
+.line {
+    width: 100%;
+    padding: 1px;
+    background-color: black;
 }
 
 /* ********** FOOTER ********** */
@@ -129,6 +203,7 @@ nav h1 {
     padding: 10px;
     position: fixed;
     bottom: 0;
+    background-color: white;
 }
 .main-footer-div h3 {
     font-size: 12px;

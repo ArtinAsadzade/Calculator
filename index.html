@@ -16,6 +16,9 @@
                 <img src="assets/images/github.png" alt="Github Logo">
             </a>
             <h1>Count Whatever You Like</h1>
+            <a href="#" id="clear-button">
+                <img src="assets/images/clearData.png" alt="Clear Data Button">
+            </a>
             <a href="#" id="back-button">
                 <img src="assets/images/BackButton.png" alt="Back Button">
             </a>
@@ -25,21 +28,13 @@
     <main>
         <section class="container" id="main-sec">
             <div class="services-main-div">
-                <div class="service" id="height-cal">
-                    <img src="assets/images/Height.png" alt="Service Logo">
-                    <p>Height calculation</p>
-                </div>
-                <div class="service" id="weight-cal">
-                    <img src="assets/images/weight.png" alt="Service Logo">
-                    <p>Calculate weight</p>
+                <div class="service" id="bmi-cal">
+                    <img src="assets/images/bmiIcon.png" alt="Service Logo">
+                    <p>BMI calculation</p>
                 </div>
                 <div class="service" id="love-cal">
                     <img src="assets/images/love.png" alt="Service Logo">
-                    <p>Calculation of love</p>
-                </div>
-                <div class="service" id="age-cal">
-                    <img src="assets/images/age.png" alt="Service Logo">
-                    <p>Age calculation</p>
+                    <p>Calculation of love (Fun)</p>
                 </div>
                 <div class="service" id="number-cal">
                     <img src="assets/images/numbers.png" alt="Service Logo">
@@ -49,14 +44,36 @@
         </section>
     </main>
     <div id="calculator-form">
-        <input type="text" placeholder="Enter Your First Name">
-        <input type="text" placeholder="Enter Your Last Name">
-        <input type="number" placeholder="Enter Your Height">
-        <input type="number" placeholder="Enter Your Weight">
-        <input type="text" placeholder="Enter Your Bf/Gf Name">
-        <input type="text" placeholder="Enter Your Birthday" value="1386 Or 1402" >
+        <h2>Please fill out the form</h2>
+        <input id="firstName" type="text" placeholder="Enter Your First Name">
+        <input id="lastName" type="text" placeholder="Enter Your Last Name">
+        <input id="height" type="number" placeholder="Enter Your Height">
+        <input id="weight" type="number" placeholder="Enter Your Weight">
+        <input id="loveName" type="text" placeholder="Enter Your Bf/Gf Name">
+        <input id="birthDay" type="text" placeholder="Enter Your Birthday" value="Like: 1386 Or 2007" >
+        <select id="genderSelctor">
+            <option value="Man" class="genderOption">&#x2642; Man</option>
+            <option value="Woman" class="genderOption">&#x2640; Woman</option>
+        </select>
         <span id="error"></span>
         <button id="submit">Submit</button>
+    </div>
+    <div id="resultDivElem" class="container">
+        <p id="loveCount"><span id="firstUserNameElem"></span> and <span id="loveNameElem"></span> love each other <span id="countElem"></span> !</p>
+        <div id="bmiResultElem">
+            <div class="results">
+                <h3>Ideal Weight</h3>
+                <span id="idealWeight">0</span>
+            </div>
+            <div class="results">
+                <h3>BMI</h3>
+                <span id="bmi">0</span>
+            </div>
+            <div class="results">
+                <h3>Result</h3>
+                <span id="result">0</span>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="main-footer-div">
@@ -65,7 +82,7 @@
             </h3>
         </div>
     </footer>
-
+    
 
     <script src="assets/js/script.js"></script>
 </body>
