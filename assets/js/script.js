@@ -20,7 +20,7 @@ const countElem = $.getElementById('countElem');
 const bmiResultElem = $.getElementById('bmiResultElem');
 const idealWeight = $.getElementById('idealWeight');
 const ShowBmiResultElem = $.getElementById('bmi');
-const bmiResult = $.getElementById('Result');
+const bmiResult = $.getElementById('result');
 
 const firstNameValue = $.getElementById('firstName');
 const lastNameValue = $.getElementById('lastName');
@@ -111,14 +111,44 @@ bmiCalculator.addEventListener('click', ()=>{
     mainSec.style.display = 'none';
 
     let bmiHeight = localStorage.getItem('height') / 100;
-    let bmi = localStorage.getItem('weight') / bmiHeight / bmiHeight;
+    let bmi = localStorage.getItem('weight') / bmiHeight / bmiHeight.toFixed(1);
+    let fatPercentage = Math.floor(localStorage.getItem('weight') / bmi);
+    let overWeight = Math.floor(fatPercentage * localStorage.getItem('weight')) / 100;
 
     if (localStorage.getItem('gender') === 'Woman') {
-        ShowBmiResultElem.innerHTML = bmi.toFixed(1);
+        ShowBmiResultElem.innerHTML = bmi;
+        idealWeight.innerHTML = Math.floor(localStorage.getItem('weight') - overWeight);
 
+        if (bmi < 18.5) {
+            bmiResult.innerHTML = 'Thin and underweight !';
+            bmiResult.style.color = 'red';
+        } else if (bmi < 25) {
+            bmiResult.innerHTML = 'proper weight :)';
+            bmiResult.style.color = 'white';
+        } else if (bmi < 29.9) {
+            bmiResult.innerHTML = 'Overweight !';
+            bmiResult.style.color = 'yellow';
+        } else if (bmi > 30) {
+            bmiResult.innerHTML = 'excessive obesity !!!';
+            bmiResult.style.color = 'red';
+        }
     } else if (localStorage.getItem('gender') === 'Man') {
         ShowBmiResultElem.innerHTML = bmi.toFixed(1);
-        
+        idealWeight.innerHTML = Math.floor(localStorage.getItem('weight') - overWeight);
+
+        if (bmi < 18.5) {
+            bmiResult.innerHTML = 'Thin and underweight !';
+            bmiResult.style.color = 'red';
+        } else if (bmi < 25) {
+            bmiResult.innerHTML = 'proper weight :)';
+            bmiResult.style.color = 'white';
+        } else if (bmi < 29.9) {
+            bmiResult.innerHTML = 'Overweight !';
+            bmiResult.style.color = 'yellow';
+        } else if (bmi > 30) {
+            bmiResult.innerHTML = 'excessive obesity !!!';
+            bmiResult.style.color = 'red';
+        }
     }
 });
 loveCalculator.addEventListener('click', ()=>{
