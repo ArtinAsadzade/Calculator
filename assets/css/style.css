@@ -1,233 +1,231 @@
 *,
 *::after,
-*::before{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    text-transform: capitalize;
+*::before {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-transform: capitalize;
 }
 
 html,
 button {
-    font-family: 'Brush Script MT', cursive;
+  font-family: "Brush Script MT", cursive;
 }
-body{
-    background-color: var(--color-ffff);
+body {
+  background-color: var(--color-ffff);
 }
-.head{
-    background-color: var(--color-ffff);
-    border-bottom: solid 0.5px var(--color-primary);
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1200;
+.head {
+  background-color: var(--color-ffff);
+  border-bottom: solid 0.5px var(--color-primary);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1200;
 }
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 10px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
-
 
 /* ********** HEADER ********** */
 header {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 0 7px black;
-    padding: 10px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 7px black;
+  padding: 10px;
 }
 nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 nav img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: auto;
-    
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: auto;
 }
 nav h1 {
-    font-size: 12px;
-    margin: auto;
-    text-shadow: 0 0 3px black;
+  font-size: 12px;
+  margin: auto;
+  text-shadow: 0 0 3px black;
 }
 #back-button {
-    display: none;
+  display: none;
 }
 #clear-button {
-    display: block;
+  display: block;
 }
 /* ********** MAIN ********** */
 .services-main-div {
-    width: 100%;
-    height: auto;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: auto;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1rem));
 }
 .service {
-    width: 200px;
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 0  9px black;
-    border-radius: 12px;
-    cursor: pointer;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1rem));
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 9px black;
+  border-radius: 12px;
+  cursor: pointer;
 }
 .service img {
-    width: 40px;
+  width: 40px;
 }
 .service p {
-    font-size: 10px;
+  font-size: 10px;
 }
 #clearData {
-    width: 30%;
-    margin: 20px;
-    border: 0;
-    box-shadow: 0 3px 8px black;
-    text-align: center;
-    border-radius: 50%;
-    padding: 5px 10px;
-    outline: 0;
-    background-color: gray;
-    font-size: 10px;
-    font-family: fantasy;
-    cursor: pointer;
+  width: 30%;
+  margin: 20px;
+  border: 0;
+  box-shadow: 0 3px 8px black;
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px 10px;
+  outline: 0;
+  background-color: gray;
+  font-size: 10px;
+  font-family: fantasy;
+  cursor: pointer;
 }
 /* ********** FORM ********** */
 #calculator-form {
-    width: 100%;
-    margin: 100px auto;
-    text-align: center;
+  width: 100%;
+  margin: 100px auto;
+  text-align: center;
 }
-#calculator-form input{
-    width: 60%;
-    margin: 20px;
-    border: 0;
-    box-shadow: 0 3px 8px black;
-    text-align: center;
-    border-radius: 12px;
-    padding: 10px 15px;
-    outline: 0;
-    background-color: white;
-    color: black;
+#calculator-form input {
+  width: 60%;
+  margin: 20px;
+  border: 0;
+  box-shadow: 0 3px 8px black;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px 15px;
+  outline: 0;
+  background-color: white;
+  color: black;
 }
 #calculator-form input:focus {
-    box-shadow: 1px 6px 11px black;
+  box-shadow: 1px 6px 11px black;
 }
-#calculator-form select{
-    width: 60%;
-    margin: 20px;
-    border: 0;
-    box-shadow: 0 3px 8px black;
-    text-align: center;
-    border-radius: 12px;
-    padding: 10px 15px;
-    outline: 0;
-    background-color: white;
+#calculator-form select {
+  width: 60%;
+  margin: 20px;
+  border: 0;
+  box-shadow: 0 3px 8px black;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px 15px;
+  outline: 0;
+  background-color: white;
 }
-.genderOption{
-    width: 60%;
-    margin: 20px;
-    border: 0;
-    box-shadow: 0 3px 8px black;
-    text-align: center;
-    border-radius: 12px;
-    padding: 10px 15px;
-    outline: 0;
-    background-color: white;
+.genderOption {
+  width: 60%;
+  margin: 20px;
+  border: 0;
+  box-shadow: 0 3px 8px black;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px 15px;
+  outline: 0;
+  background-color: white;
 }
 #error {
-    color: red;
-    display: none;
+  color: red;
+  display: none;
 }
 #submit {
-    width: 60%;
-    margin: 20px;
-    border: 0;
-    box-shadow: 0 3px 8px black;
-    text-align: center;
-    border-radius: 12px;
-    padding: 10px 15px;
-    outline: 0;
-    background-color: green;
-    font-size: 15px;
-    font-family: fantasy;
-    cursor: pointer;
+  width: 50%;
+  margin: 20px;
+  border: 0;
+  box-shadow: 0 3px 8px black;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px 15px;
+  outline: 0;
+  background-color: green;
+  font-size: 15px;
+  font-family: fantasy;
+  cursor: pointer;
 }
 /* ********** RESULT ********** */
 #resultDivElem {
-    display: none;
+  display: none;
 }
 #loveCount {
-    display: none;
-    text-align: center;
-    font-size: 18px;
-    margin: 50px auto;
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  margin: 50px auto;
 }
 #firstUserNameElem {
-    color: red;
-    font-size: 21px;
+  color: red;
+  font-size: 21px;
 }
 #loveNameElem {
-    color: red;
-    font-size: 21px;
+  color: red;
+  font-size: 21px;
 }
 #countElem {
-    color: red;
-    font-size: 21px;
+  color: red;
+  font-size: 21px;
 }
 #bmiResultElem {
-    width: 90%;
-    padding: 10px 15px;
-    margin: 50px auto 100px;
-    border-radius: 10px;
-    display: none;
+  width: 90%;
+  padding: 10px 15px;
+  margin: 50px auto 100px;
+  border-radius: 10px;
+  display: none;
 }
 .results {
-    box-shadow: 3px 6px 11px black;
-    padding: 10px 15px;
-    margin: 50px auto;
-    border-radius: 10px;
-    background-color: white;
-    text-align: center;
+  box-shadow: 3px 6px 11px black;
+  padding: 10px 15px;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
 }
 #result {
-    text-shadow: 0 0 3px black;
+  text-shadow: 0 0 3px black;
 }
 
 /* ********** LINE ********** */
 .line {
-    width: 100%;
-    padding: 1px;
-    background-color: black;
+  width: 100%;
+  padding: 1px;
+  background-color: black;
 }
 
 /* ********** FOOTER ********** */
 .main-footer-div {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 0 7px black;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    background-color: white;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 7px black;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
 }
 .main-footer-div h3 {
-    font-size: 12px;
-    text-align: center;
+  font-size: 12px;
+  text-align: center;
 }
 #name {
-    color: white;
-    text-shadow: 0 3px 11px black;
+  color: white;
+  text-shadow: 0 3px 11px black;
 }
 #coffee {
-    color: white;
-    text-shadow: 0 3px 11px #6F4E37;
+  color: white;
+  text-shadow: 0 3px 11px #6f4e37;
 }
